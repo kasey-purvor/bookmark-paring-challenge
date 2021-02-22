@@ -1,6 +1,21 @@
 require 'sinatra/base'
-require './lib/bookmark'
+require './lib/bookmarks'
 class Bookmark_App < Sinatra::Base
   enable :sessions
+
+  get '/' do
+    @bookamarks = Bookmarks.new
+    erb :bookmarks
+  end
+
+
+
+
+
+
+
+
+
+
 
 end
