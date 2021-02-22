@@ -1,5 +1,7 @@
-<<head>
-Bookmarks:
-</head>
-<br>
-<%= @bookmarks %>
+<h1>Saved Bookmarks:</h1>
+
+<ul>
+  <% @bookmarks.each do |bookmark| %>
+    <li><%= bookmark %></li>
+  <% end %>
+</ul>
