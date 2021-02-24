@@ -1,7 +1,19 @@
+<head>
+<h1>Bookmarks Manager</h1>
+</head>
+<br>
+<form action="/add_bookmark" method="post">
+  Add Bookmark:
+  URL:<input type="text" name="new_url">
+  Title:<input type="text" name="new_title">
+  <input type="submit" name="Submit">
+</form>
 <h1>Saved Bookmarks:</h1>
-
 <ul>
-  <% @bookmarks.each do |bookmark| %>
-    <li><%= bookmark %></li>
+  <% @bookmarks.map do |bookmark| %>
+    <li><a href="<%= bookmark.url %>">
+    <%= bookmark.title %> </a> </li>
   <% end %>
+
+
 </ul>
